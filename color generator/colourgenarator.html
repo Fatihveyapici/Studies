@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Colour Generator</title>
+</head>
+
+<body>
+  <div class="color">
+    <span id="hex">#e74c3c</span>
+    <button onclick="getRandomColor()">Generate Color</button>
+  </div>
+    <script language="javascript">
+function getRandomColor() {
+  var letter,color ;
+  letter = "0123456789ABCDEF";
+  color = "#";
+  for (var i = 0; i < 6; i++) {
+    color = color + letter[Math.floor(Math.random() * 16)];
+  }
+  
+  document.body.style.background = color;
+  document.getElementById("hex").innerHTML=color;
+  
+}
+
+    </script>
+
+</body>
+</html>

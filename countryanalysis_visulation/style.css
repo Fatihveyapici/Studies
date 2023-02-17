@@ -1,0 +1,114 @@
+body {
+    font-size: 62.5%;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    background-color: whitesmoke;
+  }
+  
+  header {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+  
+    font-size: 2rem;
+  }
+  
+  h1 {
+    text-decoration: underline;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  .category-container {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+  
+    box-shadow: 0.5rem 0.2rem 1rem rgba(0, 0, 0, 0.2),
+      0.5rem -0.2rem 1rem rgba(0, 0, 0, 0.2);
+  
+    padding: 1rem;
+  }
+  .category-heading-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+  .category-heading {
+    padding: 1rem;
+    background: orange;
+    border-radius: 1rem;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+  
+    box-shadow: 0rem 0rem 0.2rem rgba(0, 0, 0, 0.4);
+  
+    transition: background-color 0.3s, color 0.2s, box-shadow 0.3s;
+  }
+  .category-title {
+  }
+  
+  /* Country */
+  .countries-container {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+  
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+    overflow: auto;
+  }
+  
+  .countries-container > *:first-child {
+    margin-top: 2rem;
+  }
+  
+  .country-container {
+    padding: 1rem;
+    width: 50%;
+    display: grid;
+    grid-template-columns: minmax(10rem, 10fr) 80fr minmax(10rem, 10fr);
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .country-name {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+  
+  .country-graph {
+    width: 100%;
+  }
+  .graph {
+    display: inline-block;
+    width: 100%;
+    background-color: orange;
+  }
+  .country-population {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  /* HOVER STATES */
+  .category-heading:hover {
+    background-color: rgba(255, 166, 0, 0.119);
+    color: orange;
+    box-shadow: 0rem 0rem 0.2rem rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }

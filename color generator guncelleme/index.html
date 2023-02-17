@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Colour Generator</title>
+</head>
+
+<body>
+  <div>
+    <label for="numColors">Number of colors:</label>
+    <input type="number" id="numColors">
+    <button id="generateBtn">Generate Colors</button>
+  </div>
+  <div id="colorsContainer"></div>
+    <script language="javascript">
+      const generateBtn = document.getElementById("generateBtn");
+      const numColorsInput = document.getElementById("numColors");
+      const colorsContainer = document.getElementById("colorsContainer");
+
+      generateBtn.addEventListener("click", function() {
+        const numColors = numColorsInput.value;
+        colorsContainer.innerHTML = "";
+
+        for (let i = 0; i < numColors; i++) {
+          const color = generateRandomColor();
+          const colorDiv = document.createElement("div");
+          colorDiv.style.backgroundColor = color;
+          colorDiv.innerHTML = `<p>${color}</p>`;
+          colorsContainer.appendChild(colorDiv);
+        }
+      });
+
+      function generateRandomColor() {
+        const letters = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+    </script>
+</body>
+</html>

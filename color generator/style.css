@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e74c3c;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.color{
+    margin-top: 300px;
+    text-align: center;
+
+}
+#hex{
+    display: block;
+    color: white;
+    font-size: 40px;
+    text-transform: capitalize;
+    margin: 10px;
+}
+.color button{
+    background: none;
+    outline: auto;
+    color: white;
+    border: 3px;
+    cursor: pointer;
+    font-size: 22px;
+
+}
